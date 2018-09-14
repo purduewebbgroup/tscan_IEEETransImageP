@@ -1,0 +1,4 @@
+echo ./getmu mu_x
+./getmu mu_x
+echo ./getmu mu_m
+./getmu mu_m

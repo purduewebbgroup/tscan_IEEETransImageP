@@ -1,0 +1,495 @@
+
+-----------------------------------------------------
+1. Generate the simulated true phatoms.
+Output files will be mu_x.dat for mu_a and D at lambda_x,
+mu_m.dat for mu_a and D at lambda_m and fluo.dat
+for fluorescence parameters tau and eta.
+
+cd ./getmu_Resolution/
+make clean
+rm -f *.o  
+make
+gcc -g -Wall -pedantic   -c gen_x.c
+gen_x.c:7:29: warning: C++ style comments are not allowed in ISO C90
+gen_x.c:7:29: warning: (this will be reported only once per input file)
+gcc -g -Wall -pedantic   -c allocate.c 
+gcc -g -Wall -pedantic   -c fileop.c 
+gcc -g -Wall -pedantic  -o ./getmu_Resolution  allocate.o gen_x.o fileop.o -lm
+RUNME
+./getmu_Resolution mu_x
+./getmu_Resolution mu_m
+mv mu_x.dat ../Resolution/
+mv mu_m.dat ../Resolution/
+cd ..
+cd ./getf_Resolution/
+make clean
+rm -f *.o  
+make
+gcc -g -Wall -pedantic   -c gen_x.c
+gen_x.c:7:29: warning: C++ style comments are not allowed in ISO C90
+gen_x.c:7:29: warning: (this will be reported only once per input file)
+gcc -g -Wall -pedantic   -c allocate.c 
+gcc -g -Wall -pedantic   -c fileop.c 
+gcc -g -Wall -pedantic  -o ./getf_Resolution  allocate.o gen_x.o fileop.o -lm
+RUNME
+./getf_Resolution fluo
+
+delta_x = 0.026563
+delta_y = 0.026563
+delta_z = 0.026563
+
+x = 0.746875
+y = 0.800000
+z = 0.746875
+
+x = 0.746875
+y = 0.800000
+z = 0.853125
+
+x = 0.853125
+y = 0.800000
+z = 0.746875
+
+x = 0.853125
+y = 0.800000
+z = 0.853125
+mv fluo.dat ../Resolution/
+cd ..
+
+
+-----------------------------------------------------
+2. Compile and link the source files
+The executable file will be flumult
+
+cd code/
+make clean
+rm -f *.o  
+make
+gcc -O -Wall -pedantic   -c allocate.c -o allocate.o
+gcc -O -Wall -pedantic   -c randlib.c -o randlib.o
+randlib.c: In function ‘readseed’:
+randlib.c:157: warning: format ‘%d’ expects type ‘int *’, but argument 3 has type ‘long unsigned int *’
+randlib.c: In function ‘writeseed’:
+randlib.c:172: warning: format ‘%d’ expects type ‘int’, but argument 3 has type ‘long unsigned int’
+gcc -O -Wall -pedantic   -c fileop.c -o fileop.o
+gcc -O -Wall -pedantic   -c textfile.c -o textfile.o
+gcc -O -Wall -pedantic   -c listfun.c -o listfun.o
+f77 -O  -c   cud3.f
+f77 -O  -c   cudcom.f
+f77 -O  -c   cud3ln.f
+f77 -O  -c   cud3pn.f
+f77 -O  -c   fwdsolver3d.f
+gcc -O -Wall -pedantic   -c frechet.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+frechet.c: In function ‘fwdsolver_3d_fluo’:
+frechet.c:53: warning: unused variable ‘fp’
+frechet.c: In function ‘update_frechet_col_fluo’:
+frechet.c:793: warning: unused variable ‘temp2i’
+frechet.c:793: warning: unused variable ‘temp2r’
+frechet.c:793: warning: unused variable ‘temp1i’
+frechet.c:793: warning: unused variable ‘temp1r’
+frechet.c: In function ‘calc_frechet_col_fluo’:
+frechet.c:896: warning: unused variable ‘fre_gamma_i’
+frechet.c:896: warning: unused variable ‘fre_gamma_r’
+frechet.c:895: warning: unused variable ‘tau_factor_i’
+frechet.c:895: warning: unused variable ‘tau_factor_r’
+frechet.c:891: warning: unused variable ‘temp2i’
+frechet.c:891: warning: unused variable ‘temp2r’
+frechet.c:891: warning: unused variable ‘temp1i’
+frechet.c:891: warning: unused variable ‘temp1r’
+frechet.c: In function ‘calc_frechet_row1’:
+frechet.c:1054: warning: unused variable ‘dpi’
+frechet.c:1054: warning: unused variable ‘dpr’
+frechet.c:1054: warning: unused variable ‘dgi’
+frechet.c:1054: warning: unused variable ‘dgr’
+frechet.c:1050: warning: unused variable ‘u’
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c calibrate.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c homogeneous.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+homogeneous.c: In function ‘Homo_update_Newton’:
+homogeneous.c:622: warning: unused variable ‘filename’
+homogeneous.c:621: warning: unused variable ‘fpresult’
+homogeneous.c:620: warning: unused variable ‘eig2’
+homogeneous.c:620: warning: unused variable ‘eig1’
+homogeneous.c:617: warning: unused variable ‘determinant’
+homogeneous.c: In function ‘Homo_update_Search’:
+homogeneous.c:445: warning: ‘newa’ may be used uninitialized in this function
+homogeneous.c:445: warning: ‘newb’ may be used uninitialized in this function
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c icdsd.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c icd.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+icd.c: In function ‘ICD_params_r’:
+icd.c:237: warning: unused variable ‘temp2i’
+icd.c:237: warning: unused variable ‘temp2r’
+icd.c:237: warning: unused variable ‘temp1i’
+icd.c:237: warning: unused variable ‘temp1r’
+icd.c: In function ‘ICD_params’:
+icd.c:276: warning: unused variable ‘temp2i’
+icd.c:276: warning: unused variable ‘temp2r’
+icd.c:276: warning: unused variable ‘temp1i’
+icd.c:276: warning: unused variable ‘temp1r’
+icd.c: In function ‘ICD_pixel_update_fluo_r’:
+icd.c:509: warning: unused variable ‘errcode’
+icd.c:509: warning: unused variable ‘n’
+icd.c:507: warning: unused variable ‘b’
+icd.c:507: warning: unused variable ‘a’
+icd.c: In function ‘ICD_update’:
+icd.c:645: warning: unused variable ‘temp2i’
+icd.c:645: warning: unused variable ‘temp2r’
+icd.c:645: warning: unused variable ‘temp1i’
+icd.c:645: warning: unused variable ‘temp1r’
+icd.c: In function ‘rvssolver_sg’:
+icd.c:818: warning: unused variable ‘oldwgti’
+icd.c:818: warning: unused variable ‘oldwgtr’
+icd.c:817: warning: unused variable ‘temp2i’
+icd.c:817: warning: unused variable ‘temp2r’
+icd.c:805: warning: unused variable ‘fx2’
+icd.c:804: warning: unused variable ‘c’
+icd.c: In function ‘ICD_update_fluo’:
+icd.c:984: warning: unused variable ‘temp2i’
+icd.c:984: warning: unused variable ‘temp2r’
+icd.c:984: warning: unused variable ‘temp1i’
+icd.c:984: warning: unused variable ‘temp1r’
+icd.c: In function ‘rvssolver_sg_fluo’:
+icd.c:1187: warning: unused variable ‘fluo_updates’
+icd.c:1185: warning: unused variable ‘temp2i’
+icd.c:1185: warning: unused variable ‘temp2r’
+icd.c: In function ‘convert_fluo’:
+icd.c:1321: warning: unused variable ‘fp’
+icd.c:1320: warning: unused variable ‘arrayname’
+icd.c:1320: warning: unused variable ‘filename’
+icd.c: In function ‘ICD_update’:
+icd.c:637: warning: ‘ubegin’ may be used uninitialized in this function
+icd.c:637: warning: ‘uend’ may be used uninitialized in this function
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c icdmain.c allocate.o randlib.o fileop.o textfile.o listfun.o -lm 
+icdmain.c:56:3: warning: C++ style comments are not allowed in ISO C90
+icdmain.c:56:3: warning: (this will be reported only once per input file)
+icdmain.c: In function ‘main’:
+icdmain.c:23: warning: ‘priorparam_tau’ may be used uninitialized in this function
+icdmain.c:24: warning: ‘priorparam_gamma’ may be used uninitialized in this function
+icdmain.c:26: warning: ‘priorparam_D’ may be used uninitialized in this function
+icdmain.c:27: warning: ‘priorparam_mua’ may be used uninitialized in this function
+gcc: allocate.o: linker input file unused because linking not done
+gcc: randlib.o: linker input file unused because linking not done
+gcc: fileop.o: linker input file unused because linking not done
+gcc: textfile.o: linker input file unused because linking not done
+gcc: listfun.o: linker input file unused because linking not done
+gcc -O -Wall -pedantic   -c golden.c -o golden.o
+gcc -O -Wall -pedantic   -c bracket.c -o bracket.o
+bracket.c: In function ‘bracket’:
+bracket.c:15: warning: ‘dexmin’ may be used uninitialized in this function
+f77 -O  -o ./flumult allocate.o randlib.o fileop.o textfile.o listfun.o cud3.o cudcom.o cud3ln.o cud3pn.o fwdsolver3d.o frechet.o calibrate.o homogeneous.o icdsd.o icd.o icdmain.o golden.o bracket.o -lm 
+mv flumult ../Resolution/
+cd ..
+
+
+-----------------------------------------------------
+3. Generate a simulated measurement data
+The output data file will be meas.dat
+
+cd Resolution/
+RUNMEfwd
+ 0   0   0 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 1   0   1 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 2   0   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 3   0   3 : 1.000000  0.000000  -0.000000  0.000000  -0.000000  0.000000 
+ 4   0   4 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 5   0   5 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 6   1   0 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 7   1   1 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 8   1   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+ 9   1   3 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+10   1   4 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+11   1   5 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+12   2   0 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+13   2   1 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+14   2   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+15   2   3 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+16   2   4 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+17   2   5 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+18   3   0 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+19   3   1 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+20   3   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+21   3   3 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+22   3   4 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+23   3   5 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+24   4   0 : 1.000000  0.000000  -0.000000  -0.000000  -0.000000  -0.000000 
+25   4   1 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+26   4   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+27   4   3 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+28   4   4 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+29   4   5 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+30   5   0 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+31   5   1 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+32   5   2 : 1.000000  0.000000  0.000000  -0.000000  0.000000  -0.000000 
+33   5   3 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+34   5   4 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+35   5   5 : 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+Reading in physical parameters from file `phys`...
+S: 36
+Calling calc_phi...
+calc_phi
+Calling calc_phi_fluo...
+Adding detector noise...
+
+
+-----------------------------------------------------
+4. Reconstruct image
+The output files will be saved in OUTPUT directory.
+Each column of the file OUTPUT/RESULT means:
+- 1nd column: iteration number
+- 2nd column: cost function
+- 3rd column: estimated value of alpha.
+The output filename is specified in the configuration file
+as fluohat.dat
+
+mv OUTPUT/fluohat.dat OUTPUT/OLD_OUTPUT OUTPUT/RESULT OUTPUT/WEIGHTS OUTPUT/OLD_OUTPUT
+mv: cannot move `OUTPUT/OLD_OUTPUT' to a subdirectory of itself, `OUTPUT/OLD_OUTPUT/OLD_OUTPUT'
+RUNMEinv
+Reading in physical parameters from file `phys`...
+S: 36
+Reading in model parameters from file `prior_tau`...
+Reading in model parameters from file `prior_gamma`...
+Reading in model parameters from file `prior_mua`...
+Reading in model parameters from file `prior_mua`...
+Reading measurement data...
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+1.000000,0.000000
+Forward solution...
+calc_phi
+yerror[0][0]=1.130145e-07
+yerror[0][1]=5.404951e-10
+yerror[1][0]=6.697888e-08
+yerror[1][1]=-2.317595e-08
+yerror[2][0]=1.066711e-07
+yerror[2][1]=-4.072758e-08
+yerror[3][0]=-4.046094e-08
+yerror[3][1]=3.951289e-09
+yerror[4][0]=3.200076e-08
+yerror[4][1]=-3.736946e-08
+yerror[5][0]=6.085757e-08
+yerror[5][1]=-1.475974e-08
+yerror[6][0]=7.185081e-08
+yerror[6][1]=7.485446e-09
+yerror[7][0]=5.799534e-08
+yerror[7][1]=-3.390663e-08
+yerror[8][0]=4.626292e-08
+yerror[8][1]=-1.212136e-08
+yerror[9][0]=2.572007e-08
+yerror[9][1]=-7.835098e-08
+yerror[10][0]=3.096307e-08
+yerror[10][1]=-1.374589e-08
+yerror[11][0]=2.630682e-08
+yerror[11][1]=6.512654e-09
+yerror[12][0]=3.397214e-08
+yerror[12][1]=-5.717543e-09
+yerror[13][0]=9.196038e-08
+yerror[13][1]=2.294247e-08
+yerror[14][0]=1.240035e-08
+yerror[14][1]=-3.282424e-08
+yerror[15][0]=9.817301e-08
+yerror[15][1]=1.269454e-08
+yerror[16][0]=3.685546e-08
+yerror[16][1]=2.354062e-08
+yerror[17][0]=6.997679e-08
+yerror[17][1]=-2.198440e-08
+yerror[18][0]=4.541560e-08
+yerror[18][1]=2.040116e-08
+yerror[19][0]=4.012177e-08
+yerror[19][1]=-2.526369e-09
+yerror[20][0]=4.210094e-08
+yerror[20][1]=-4.535505e-10
+yerror[21][0]=2.818242e-08
+yerror[21][1]=-9.018703e-09
+yerror[22][0]=4.452776e-08
+yerror[22][1]=-3.152690e-08
+yerror[23][0]=4.381551e-08
+yerror[23][1]=-3.244952e-08
+yerror[24][0]=-1.469130e-09
+yerror[24][1]=-1.703183e-08
+yerror[25][0]=2.490954e-08
+yerror[25][1]=-4.286657e-08
+yerror[26][0]=1.319677e-08
+yerror[26][1]=-1.551167e-08
+yerror[27][0]=3.240436e-08
+yerror[27][1]=5.589917e-09
+yerror[28][0]=3.059771e-08
+yerror[28][1]=-2.824831e-08
+yerror[29][0]=1.514492e-08
+yerror[29][1]=-4.006860e-08
+yerror[30][0]=1.794959e-09
+yerror[30][1]=-1.455878e-08
+yerror[31][0]=4.796170e-08
+yerror[31][1]=-2.511653e-08
+yerror[32][0]=8.494628e-08
+yerror[32][1]=-3.829968e-08
+yerror[33][0]=5.256196e-08
+yerror[33][1]=4.455923e-09
+yerror[34][0]=1.910022e-08
+yerror[34][1]=1.124699e-08
+yerror[35][0]=7.198766e-08
+yerror[35][1]=9.573134e-09
+Inversion...
+calc_green...
+calc_green
+alpha 5.406432e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.000000, prior[3] 0.000000
+R=1
+yerror=(1.130145e-07 5.404951e-10)    At=2.951828e-12
+yerror=(5.050017e-08 1.627641e-09)    At=2.377526e-08
+alpha 3.111368e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.000000, prior[3] 5.296260
+alpha 3.111368e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.000000, prior[3] 5.296260
+R=1
+yerror=(5.054204e-08 2.183767e-09)    At=2.327754e-09
+yerror=(3.850749e-08 1.823770e-09)    At=2.620099e-13
+alpha 2.515552e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.739717, prior[3] 1.694918
+alpha 2.515552e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.739717, prior[3] 1.694918
+R=1
+yerror=(3.850178e-08 1.840876e-09)    At=6.473872e-08
+yerror=(4.198365e-08 1.738847e-09)    At=4.156320e-09
+alpha 2.396826e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.383616, prior[3] 0.839370
+alpha 2.396826e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.383616, prior[3] 0.839370
+R=1
+yerror=(4.198255e-08 1.760254e-09)    At=4.347872e-11
+yerror=(3.887922e-08 1.785489e-09)    At=5.112681e-11
+alpha 2.370743e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.261818, prior[3] 0.522274
+alpha 2.370743e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.261818, prior[3] 0.522274
+R=1
+yerror=(3.887863e-08 1.803490e-09)    At=1.277388e-12
+yerror=(3.983633e-08 1.784748e-09)    At=2.908436e-09
+alpha 2.360406e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.182995, prior[3] 0.354936
+alpha 2.360406e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.182995, prior[3] 0.354936
+R=1
+yerror=(3.983633e-08 1.801918e-09)    At=4.863852e-09
+yerror=(3.991869e-08 1.800885e-09)    At=1.204925e-08
+alpha 2.353381e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.140333, prior[3] 0.264243
+alpha 2.353381e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.140333, prior[3] 0.264243
+R=1
+yerror=(3.991903e-08 1.819226e-09)    At=3.974032e-12
+yerror=(3.953621e-08 1.832175e-09)    At=1.813568e-09
+alpha 2.347196e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.116208, prior[3] 0.220981
+alpha 2.347196e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.116208, prior[3] 0.220981
+R=1
+yerror=(3.953693e-08 1.852630e-09)    At=9.240816e-13
+yerror=(3.955064e-08 1.857636e-09)    At=5.585784e-08
+alpha 2.341806e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.113417, prior[3] 0.194965
+alpha 2.341806e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.113417, prior[3] 0.194965
+R=1
+yerror=(3.955153e-08 1.877631e-09)    At=5.619692e-10
+yerror=(3.989213e-08 1.882424e-09)    At=4.073290e-12
+alpha 2.337513e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.121746, prior[3] 0.182657
+alpha 2.337513e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.121746, prior[3] 0.182657
+R=1
+yerror=(3.989312e-08 1.901218e-09)    At=2.898582e-08
+yerror=(3.982841e-08 1.908825e-09)    At=2.838525e-11
+alpha 2.333886e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.137878, prior[3] 0.178997
+alpha 2.333886e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.137878, prior[3] 0.178997
+R=1
+yerror=(3.982950e-08 1.927305e-09)    At=2.375451e-10
+yerror=(3.994978e-08 1.934127e-09)    At=5.787372e-08
+alpha 2.330566e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.158710, prior[3] 0.177375
+alpha 2.330566e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.158710, prior[3] 0.177375
+R=1
+yerror=(3.995092e-08 1.951433e-09)    At=3.531678e-11
+yerror=(3.982086e-08 1.960589e-09)    At=3.197388e-12
+alpha 2.327912e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.181805, prior[3] 0.181606
+alpha 2.327912e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.181805, prior[3] 0.181606
+R=1
+yerror=(3.982210e-08 1.977620e-09)    At=6.808272e-10
+yerror=(4.001767e-08 1.983284e-09)    At=8.600087e-09
+alpha 2.325418e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.207875, prior[3] 0.187348
+alpha 2.325418e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.207875, prior[3] 0.187348
+R=1
+yerror=(4.001897e-08 2.000015e-09)    At=1.050272e-11
+yerror=(4.006929e-08 2.006285e-09)    At=8.201698e-10
+alpha 2.323051e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.235236, prior[3] 0.193715
+alpha 2.323051e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.235236, prior[3] 0.193715
+R=1
+yerror=(4.007051e-08 2.021115e-09)    At=3.450776e-08
+yerror=(4.006752e-08 2.027951e-09)    At=2.336076e-14
+alpha 2.320982e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.261258, prior[3] 0.199259
+alpha 2.320982e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.261258, prior[3] 0.199259
+R=1
+yerror=(4.006877e-08 2.041945e-09)    At=1.010454e-09
+yerror=(4.015633e-08 2.049487e-09)    At=2.812604e-14
+alpha 2.318866e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.286831, prior[3] 0.207725
+alpha 2.318866e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.286831, prior[3] 0.207725
+R=1
+yerror=(4.015755e-08 2.062720e-09)    At=1.338705e-08
+yerror=(4.012979e-08 2.068479e-09)    At=1.985835e-12
+alpha 2.316860e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.312170, prior[3] 0.216349
+alpha 2.316860e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.312170, prior[3] 0.216349
+R=1
+yerror=(4.013107e-08 2.081827e-09)    At=7.934345e-12
+yerror=(4.029844e-08 2.087395e-09)    At=1.565055e-12
+alpha 2.314957e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.338592, prior[3] 0.224436
+alpha 2.314957e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.338592, prior[3] 0.224436
+R=1
+yerror=(4.029966e-08 2.099301e-09)    At=2.651780e-11
+yerror=(4.023095e-08 2.103856e-09)    At=9.240816e-13
+alpha 2.313438e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.363058, prior[3] 0.229921
+alpha 2.313438e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.363058, prior[3] 0.229921
+R=1
+yerror=(4.023205e-08 2.114448e-09)    At=1.111821e-12
+yerror=(4.021523e-08 2.121657e-09)    At=3.335494e-10
+alpha 2.312004e-08, prior[0] 0.000000,  prior[1] 0.000000, prior[2] 0.384846, prior[3] 0.237821
+
+
+-----------------------------------------------------
+5. Plot convergence and images
+
+matlab -nodesktop -nosplash -r RUNME
+MATLAB is selecting SOFTWARE OPENGL rendering.
+PuTTY X11 proxy: unable to connect to forwarded X server: Network error: Connection refused
+[?1h=
+                                                      < M A T L A B (R) >
+                                            Copyright 1984-2017 The MathWorks, Inc.
+                                            R2017a (9.2.0.538062) 64-bit (glnxa64)
+                                                       February 23, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory: ../MAT] 
+[> In path (line 109)
+  In RUNME (line 1)] 
+{Undefined function or variable 'loadmu1'.
+
+Error in RUNME (line 50)
+x=loadmu1(foo,'fluohat',33,33,33);
+} 
+>> exit
+[?1l>
+

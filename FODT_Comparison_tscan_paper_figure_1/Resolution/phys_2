@@ -1,0 +1,95 @@
+# Physical Parameters
+physical {
+ xmin  -0.05
+ xmax   1.65
+ ymin  -0.05
+ ymax   1.65
+ zmin  -0.05
+ zmax   1.65
+
+  Ni  33
+  Nj  33
+  Nl  33
+
+  K  4
+  M  4
+
+  v   2.25414e+10
+}
+
+
+#Sources
+
+source {
+#0
+  position 1.2 0.8 0
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#1
+  position 0 0.8 0.4
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#2
+  position 0.4 0.8 1.6
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#3
+  position 1.6 0.8 1.2
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+
+
+
+#detectors
+detector {
+#0
+  position 0.4 0.8 0
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#1
+  position 0 0.8 1.2
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#2
+  position 1.2 0.8 1.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#3
+  position 1.6 0.8 0.4
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+
+
+#Connections
+connections {
+0 [ 0 1 2 3 ]
+1 [ 0 1 2 3 ]
+2 [ 0 1 2 3 ]
+3 [ 0 1 2 3 ]
+}

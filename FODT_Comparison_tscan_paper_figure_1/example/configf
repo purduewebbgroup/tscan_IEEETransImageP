@@ -1,0 +1,49 @@
+physical:         phys
+prior_tau:        prior_tau
+prior_gamma:      prior_gamma
+prior_D:          prior_mua
+prior_mua:        prior_mua
+
+meas:             meas.dat
+mu_x:             mu_x.dat
+
+fluo_store_flag:  1
+fluohat_path:     OUTPUT
+RESULT_path:      OUTPUT
+
+tau_background:   0
+etamu_background: 0
+
+D_background:     0.027
+mua_background:   0.047
+
+init_guess_fluo_flag: 0
+init_guess_fluo_path: /home/yara/bouman/amilstei/DUMP_BOXP/fluo_interp.dat
+init_guess_fluo_varname: fluo
+
+init_guess_opt_flag: 1
+init_guess_opt_path: mu_m.dat
+init_guess_opt_varname: mu
+
+calibration_flag: 0
+homogeneous_flag: 0
+global_weight_flag: 0
+
+init_wgtr: 1.0
+init_wgti: 0.0
+
+tau_flag:         1
+etamu_flag:       1
+
+D_flag:           0
+mua_flag:         0
+
+#ICD_iterations:   200
+ICD_iterations:   20
+rmse_tolerance:   1.e-10
+alpha_lower_bound: 1.e-13
+
+borderi:   2
+borderj:   2
+borderl:   2
+

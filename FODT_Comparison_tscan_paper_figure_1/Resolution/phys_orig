@@ -1,0 +1,367 @@
+# Physical Parameters
+physical {
+ xmin  -4.18
+ xmax   4.18
+ ymin  -4.18
+ ymax   4.18
+ zmin  -0.18
+ zmax   5.88
+
+  Ni  33
+  Nj  33 
+  Nl  17
+
+  K  21
+  M  21
+
+  v   2.2541e10
+}
+
+
+#Sources
+
+source {
+#0
+  position -3.0 -3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#1
+  position -1.0 -3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#2
+  position 1.0 -3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#3
+  position 3.0 -3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#4
+  position -2.0 -1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#5
+  position 0.0 -1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#6
+  position 2.0 -1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#7
+  position -3.0 -0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#8
+  position -1.0 -0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#9
+  position 1.0 -0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#10
+  position 3.0 -0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#11
+  position -2.0 0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#12
+  position 0.0 0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#13
+  position 2.0 0.6 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#14
+  position -3.0 1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#15
+  position -1.0 1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#16
+  position 1.0 1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#17
+  position 3.0 1.8 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#18
+  position -2.0 3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#19
+  position 0.0 3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#20
+  position 2.0 3.0 0.1
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+
+
+
+#detectors
+detector {
+#0
+  position -3.0 -3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#1
+  position -1.0 -3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#2
+  position 1.0 -3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#3
+  position 3.0 -3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#4
+  position -2.0 -1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#5
+  position 0.0 -1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#6
+  position 2.0 -1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#7
+  position -3.0 -0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#8
+  position -1.0 -0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#9
+  position 1.0 -0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#10
+  position 3.0 -0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#11
+  position -2.0 0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#12
+  position 0.0 0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#13
+  position 2.0 0.6 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#14
+  position -3.0 1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#15
+  position -1.0 1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#16
+  position 1.0 1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#17
+  position 3.0 1.8 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#18
+  position -2.0 3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#19
+  position 0.0 3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#20
+  position 2.0 3.0 5.6
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+ 
+
+#Connections
+connections {
+0 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+1 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+2 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+3 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+4 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+5 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+6 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+7 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+8 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+9 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+10 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+11 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+12 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+13 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+14 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+15 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+16 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+17 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+18 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+19 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+20 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ]
+}

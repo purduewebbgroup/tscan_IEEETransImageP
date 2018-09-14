@@ -1,0 +1,79 @@
+echo
+echo -----------------------------------------------------
+echo 1. Generate the simulated true phatoms.
+echo Output files will be mu_x.dat for mu_a and D at lambda_x, 
+echo mu_m.dat for mu_a and D at lambda_m and fluo.dat 
+echo for fluorescence parameters tau and eta.
+echo
+echo cd ./getmu/
+cd ./getmu/
+echo make clean
+make clean
+echo make
+make
+echo RUNME
+RUNME
+echo mv mu_x.dat ../example/
+mv mu_x.dat ../example/
+echo mv mu_m.dat ../example/
+mv mu_m.dat ../example/
+echo cd ..
+cd ..
+echo cd ./getf/
+cd ./getf/
+echo make clean
+make clean
+echo make
+make
+echo RUNME
+RUNME
+echo mv fluo.dat ../example/
+mv fluo.dat ../example/
+echo cd ..
+cd ..
+echo 
+echo
+echo -----------------------------------------------------
+echo 2. Compile and link the source files
+echo The executable file will be flumult
+echo
+echo cd code/
+cd code/
+echo make clean
+make clean
+echo make
+make
+echo mv flumult ../example/
+mv flumult ../example/
+echo cd ..
+cd ..
+echo
+echo
+echo -----------------------------------------------------
+echo 3. Generate a simulated measurement data
+echo The output data file will be meas.dat
+echo
+echo cd example/
+cd example/
+echo RUNMEfwd
+RUNMEfwd
+echo
+echo
+echo -----------------------------------------------------
+echo 4. Reconstruct image 
+echo The output files will be saved in OUTPUT directory. 
+echo Each column of the file OUTPUT/RESULT means:
+echo   - 1nd column: iteration number
+echo   - 2nd column: cost function
+echo   - 3rd column: estimated value of alpha. 
+echo The output filename is specified in the configuration file
+echo    as fluohat.dat
+echo
+echo mv OUTPUT/* OUTPUT/OLD_OUTPUT 
+mv OUTPUT/* OUTPUT/OLD_OUTPUT 
+echo RUNMEinv
+RUNMEinv
+echo
+echo
+
+

@@ -1,0 +1,387 @@
+ALLOCATE_INC	allocate.h	2
+AbsSquare	defs.h	/^#define  AbsSquare(R,I) ((R)*(R)+(I)*(I))$/
+BIGEND	fileop.h	1
+BIN	Makefile	/^BIN = .$/
+BNDC3D	fwdsolver3d.f	/^        SUBROUTINE BNDC3D(KBDY,XORY,YORZ,ALFA,GBDY/
+C	golden.c	4
+C	golden.c	43
+CALI_FLAG	defs.h	741
+CC	Makefile	/^CC      = $(CC_$(OS))$/
+CC_HP-UX	Makefile	/^CC_HP-UX = gcc$/
+CC_Linux	Makefile	/^CC_Linux = gcc$/
+CC_Solaris	Makefile	/^CC_Solaris = gcc$/
+CFLAGS	Makefile	/^CFLAGS  = $(CFLAGS_$(OS))$/
+CFLAGS_HP-UX	Makefile	/^CFLAGS_HP-UX   = -O -Wall -ansi -Werror$/
+CFLAGS_Linux	Makefile	/^CFLAGS_Linux   =-O -Wall -pedantic$/
+CFLAGS_Solaris	Makefile	/^CFLAGS_Solaris = -O -Wall -ansi$/
+COF3D	fwdsolver3d.f	/^        SUBROUTINE COF3D(X,Y,Z,CXX,CYY,CZZ,CX,CY,C/
+DATA	liststructs.h	1
+DEFAULT_CYCLES	defs.h	16
+D_backg	structs.h	61
+D_backg	structs.h	101
+D_flag	structs.h	81
+D_flag	structs.h	131
+ELEMENT	liststructs.h	8
+ELEMENT2D	liststructs.h	16
+ELF	textfile.o	1
+F77	Makefile	/^F77 = f77 -O $/
+FOERR	fileop.h	5
+F_SIZE	structs.h	7
+HEADERSIZE	fileop.h	4
+Homo_update_Newton	homogeneous.c	/^void Homo_update_Newton($/
+Homo_update_Search	homogeneous.c	/^void Homo_update_Search($/
+Homo_update_Search2	homogeneous.c	/^void Homo_update_Search2($/
+H‰èE…	homogeneous.o	34
+H‹ò	frechet.o	3
+ICD_params	icd.c	/^void ICD_params($/
+ICD_params_r	icd.c	/^void ICD_params_r($/
+ICD_pixel_update	icd.c	/^double ICD_pixel_update($/
+ICD_pixel_update_fluo	icd.c	/^double ICD_pixel_update_fluo($/
+ICD_pixel_update_fluo_r	icd.c	/^double ICD_pixel_update_fluo_r($/
+ICD_update	icd.c	/^void ICD_update($/
+ICD_update_fluo	icd.c	/^void ICD_update_fluo($/
+ICD_update_sd	icdsd.c	/^void ICD_update_sd($/
+ICD_update_sd2	icdsd.c	/^void ICD_update_sd2($/
+INCLUDE	Makefile	/^INCLUDE = $(INCLUDE_$(OS))$/
+K	structs.h	30
+LIBS	Makefile	/^LIBS    = $(LIBS_$(OS))$/
+LIBS_HP-UX	Makefile	/^LIBS_HP-UX   = -lm$/
+LIBS_Linux	Makefile	/^LIBS_Linux   = -lm $/
+LIBS_Solaris	Makefile	/^LIBS_Solaris = -lm $/
+LIB_OBJS	Makefile	/^LIB_OBJS = allocate.o randlib.o fileop.o textfile./
+LINK	liststructs.h	9
+LINK2D	liststructs.h	17
+L‰Ð	homogeneous.o	25
+L‰Ð	homogeneous.o	26
+L‰Ø	homogeneous.o	27
+L‰Ø	homogeneous.o	28
+L‰ØE	homogeneous.o	24
+M	structs.h	30
+MAXPRIME	randlib.c	12
+MUA	defs.h	20
+MUS	defs.h	21
+Micdmain	icdmain.c	/^int main(int argc, char **argv){$/
+NAMESIZE	fileop.h	6
+Ni	structs.h	27
+Nj	structs.h	28
+Nl	structs.h	29
+Nneighbor	structs.h	47
+OBJ	Makefile	/^OBJ  = $(LIB_OBJS) cud3.o cudcom.o cud3ln.o cud3pn/
+OPT77	Makefile	/^OPT77 = -c $/
+OS	Makefile	/^OS = Linux$/
+PI	randlib.c	13
+R	golden.c	3
+R	golden.c	44
+R	structs2.h	8
+S	structs.h	31
+SG	defs.h	/^#define  SG(A,B)        ((A) > (B) ? 1.0 : -1.0)$/
+SHFT	golden.c	/^#define SHFT(a,b,c,d) (a)=(b);(b)=(c);(c)=(d);$/
+SMALLEND	fileop.h	2
+add_detector_noise	frechet.c	/^int add_detector_noise(phys_param *physparam, dtyp/
+add_line_to_header	fileop.c	/^int add_line_to_header(FILE *fp, char *name, int */
+adjcd3	cud3.f	/^      subroutine adjcd3(nx,ny,nz,phi,cof,bndyc,coe/
+all	Makefile	/^all     : icdmain$/
+alloc_phys_param	textfile.c	/^phys_param *alloc_phys_param(void){$/
+alloc_prior_param	icd.c	/^prior_param *alloc_prior_param($/
+allocate.o	Makefile	/^allocate.o : allocate.c allocate.h$/
+alpha_bound	structs.h	58
+alpha_bound	structs.h	95
+append_to_list	listfun.c	/^int append_to_list(LINK this_one){$/
+append_to_list_2d	listfun.c	/^int append_to_list_2d(LINK2D this_one){$/
+arglist	structs2.h	13
+b	structs.h	48
+beta	structs.h	12
+borderi	structs.h	52
+borderi	structs.h	89
+borderj	structs.h	53
+borderj	structs.h	90
+borderl	structs.h	54
+borderl	structs.h	91
+bracket	bracket.c	/^mtype  bracket($/
+bracket.o	Makefile	/^bracket.o : bracket.c defs.h structs.h$/
+byte_order_test	fileop.c	/^int byte_order_test(void){$/
+calc_dddx	icdsd.c	/^int calc_dddx($/
+calc_direction	homogeneous.c	/^int calc_direction($/
+calc_dsdx	icdsd.c	/^int calc_dsdx($/
+calc_dwdx	homogeneous.c	/^int calc_dwdx($/
+calc_frechet_col	frechet.c	/^int calc_frechet_col($/
+calc_frechet_col_fluo	frechet.c	/^int calc_frechet_col_fluo($/
+calc_frechet_row	frechet.c	/^int calc_frechet_row($/
+calc_frechet_row1	frechet.c	/^int calc_frechet_row1($/
+calc_gradient	frechet.c	/^int calc_gradient($/
+calc_green	frechet.c	/^int calc_green($/
+calc_lambda	icd.c	/^void calc_lambda($/
+calc_phi	frechet.c	/^int calc_phi($/
+calc_phi_fluo	frechet.c	/^int calc_phi_fluo($/
+calc_rmse	icd.c	/^double calc_rmse($/
+calc_rmse_with_lambda	icd.c	/^double calc_rmse_with_lambda($/
+calibrate.o	Makefile	/^calibrate.o : calibrate.c $(LIB_OBJS) frechet.c fw/
+calibration_flag	structs.h	78
+calibration_flag	structs.h	124
+calii	structs.h	14
+calii	structs.h	22
+calimulti	defs.h	/^  #define calimulti(a_r, a_i, srcparam, detparam, /
+calimulti	defs.h	/^  #define calimulti(a_r, a_i, srcparam, detparam, /
+calimultr	defs.h	/^  #define calimultr(a_r, a_i, srcparam, detparam, /
+calimultr	defs.h	/^  #define calimultr(a_r, a_i, srcparam, detparam, /
+calir	structs.h	13
+calir	structs.h	21
+ccor2	cudcom.f	/^      subroutine ccor2(nx,ny,phif,ncx,ncy,phic,nxa/
+ccor3	cudcom.f	/^      subroutine ccor3(nx,ny,nz,phif,ncx,ncy,ncz,p/
+cfactri	cudcom.f	/^      subroutine cfactri(m,n,a,b,c)$/
+cfactrp	cudcom.f	/^      subroutine cfactrp(m,n,a,b,c,d,e,sum)$/
+cisfmax	cudcom.f	/^      integer function cisfmax(n,sx,incx)$/
+clean	Makefile	/^clean:$/
+config_info	structs.h	51
+config_param	structs.h	86
+convert_config	icd.c	/^int convert_config(fluo_config_param *config, conf/
+convert_fluo	icd.c	/^int convert_fluo($/
+copyright	cud2.d	/^c  .                  copyright (c) 1999 by UCAR  /
+copyright	cud3.d	/^c  .                  copyright (c) 1999 by UCAR  /
+count_elements	listfun.c	/^int count_elements(LINK head){$/
+count_elements_2d	listfun.c	/^int count_elements_2d(LINK2D head2d){$/
+cp3de1	cudcom.f	/^      subroutine cp3de1(nx,u,i,ux3,ux4,nxa)$/
+cp3de2	cudcom.f	/^      subroutine cp3de2(nx,ny,u,i,j,ux3,ux4,uy3,uy/
+cpde2	cudcom.f	/^      subroutine cpde2(nx,ny,u,i,j,ux3,ux4,uy3,uy4/
+cpde2cr	cudcom.f	/^      subroutine cpde2cr(nx,ny,u,i,j,ux3y,uxy3,ux2/
+cpde3	cudcom.f	/^      subroutine cpde3(nx,ny,nz,u,i,j,k,ux3,ux4,uy/
+cper3vb	cudcom.f	/^      subroutine cper3vb(nx,ny,nz,phi,nxa,nyc,nze)/
+cplanxy	cud3pn.f	/^      subroutine cplanxy(wk)$/
+cplanxz	cud3pn.f	/^      subroutine cplanxz(wk)$/
+cplanyz	cud3pn.f	/^      subroutine cplanyz(wk)$/
+cplxmulti	defs.h	/^#define  cplxmulti(ar,ai,br,bi)  ((ar)*(bi)+(ai)*(/
+cplxmultr	defs.h	/^#define  cplxmultr(ar,ai,br,bi)  ((ar)*(br)-(ai)*(/
+cprolon1	cudcom.f	/^      subroutine cprolon1(ncx,p,nx,q,nxa,nxb,intpo/
+cprolon2	cudcom.f	/^      subroutine cprolon2(ncx,ncy,p,nx,ny,q,nxa,nx/
+cprolon3	cudcom.f	/^      subroutine cprolon3(ncx,ncy,ncz,p,nx,ny,nz,q/
+create_new_list	listfun.c	/^LINK create_new_list(void){$/
+create_new_list_2d	listfun.c	/^LINK2D create_new_list_2d(void){$/
+cres2	cudcom.f	/^      subroutine cres2(nx,ny,resf,ncx,ncy,rhsc,nxa/
+cres3	cudcom.f	/^      subroutine cres3(nx,ny,nz,resf,ncx,ncy,ncz,r/
+csetpxy	cud3pn.f	/^      subroutine csetpxy(kset,nx,ny,nz,phi,phxy,ix/
+csetpxz	cud3pn.f	/^      subroutine csetpxz(jset,nx,ny,nz,phi,phxz,ix/
+csetpyz	cud3pn.f	/^      subroutine csetpyz(iset,nx,ny,nz,phi,phyz,iy/
+csgfa	cudcom.f	/^      subroutine csgfa (a,lda,n,ipvt,info)$/
+csgsl	cudcom.f	/^      subroutine csgsl (a,lda,n,ipvt,b,job)$/
+csscl	cudcom.f	/^      subroutine csscl(n,sa,sx,incx)$/
+cswk2	cudcom.f	/^      subroutine cswk2(nfx,nfy,phif,rhsf,phi,rhs)$/
+cswk3	cudcom.f	/^      subroutine cswk3(nfx,nfy,nfz,phif,rhsf,phi,r/
+csxpy	cudcom.f	/^      subroutine csxpy(n,sa,sx,incx,sy,incy)$/
+ctransp	cudcom.f	/^      subroutine ctransp(n,amat)$/
+ctrscxy	cud3pn.f	/^      subroutine ctrscxy(kset,nx,ny,nz,cof,cofxy,p/
+ctrscxz	cud3pn.f	/^      subroutine ctrscxz(jset,nx,ny,nz,cof,cofxz,p/
+ctrscyz	cud3pn.f	/^      subroutine ctrscyz(iset,nx,ny,nz,cof,cofyz,p/
+ctrsfc2	cudcom.f	/^      subroutine ctrsfc2(nx,ny,phi,rhs,ncx,ncy,phi/
+ctrsfc3	cudcom.f	/^      subroutine ctrsfc3(nx,ny,nz,phi,rhs,ncx,ncy,/
+cud3	cud3.f	/^      subroutine cud3(iparm,fparm,work,coef,bndyc,/
+cud3.o	Makefile	/^cud3.o : cud3.f$/
+cud31	cud3.f	/^      subroutine cud31(nx,ny,nz,rhsf,phif,coef,bnd/
+cud3ln.o	Makefile	/^cud3ln.o : cud3ln.f$/
+cud3pn.o	Makefile	/^cud3pn.o : cud3pn.f$/
+cudcom.o	Makefile	/^cudcom.o : cudcom.f $/
+cup2	cud3pn.f	/^      subroutine cup2(iparm,fparm,work,mgopt)$/
+cup21	cud3pn.f	/^      subroutine cup21(wk)$/
+d	liststructs.h	4
+d	liststructs.h	13
+datClose	fileop.c	/^void datClose(FILE *fp){$/
+datOpen	fileop.c	/^FILE *datOpen(char *filename, char *mode){$/
+delete_list	listfun.c	/^int delete_list(LINK head){$/
+delete_list_2d	listfun.c	/^int delete_list_2d(LINK2D head2d){$/
+delete_phys_param	textfile.c	/^void delete_phys_param(phys_param *phys){$/
+det_param	structs.h	23
+det_parameter	structs.h	18
+dev_obj_fn	icd.c	/^double dev_obj_fn($/
+dexprand	randlib.c	/^double dexprand()$/
+discd3	cud3.f	/^      subroutine discd3(nx,ny,nz,cof,tx,ty,tz,bndy/
+discp2	cud3pn.f	/^      subroutine discp2(nx,ny,cof,tx,ty,sum)$/
+dtype	structs.h	3
+etamu_backg	structs.h	98
+etamu_flag	structs.h	128
+fcn_arglist_type	structs2.h	1
+ff	bracket.c	/^mtype ff( arglist *args, mtype fluohat)$/
+fileop.o	Makefile	/^fileop.o : fileop.c  fileop.h$/
+find_array_with_name	fileop.c	/^int find_array_with_name(FILE *fp, char *name, int/
+find_data_in_list	listfun.c	/^int find_data_in_list(LINK head, DATA val){$/
+find_element	listfun.c	/^LINK find_element(LINK head, int index){$/
+find_element_2d	listfun.c	/^LINK2D find_element_2d(LINK2D head2d, int index){$/
+findk	calibrate.c	/^int findk($/
+findm	calibrate.c	/^int findm($/
+findr	icd.c	/^int findr(src_param *src, int karg){$/
+fluo_config_info	structs.h	88
+fluo_config_param	structs.h	137
+fluo_store_flag	structs.h	107
+fluohatpath	structs.h	106
+frechet.o	Makefile	/^frechet.o : frechet.c $(LIB_OBJS) textfile.c fileo/
+free_3D	allocate.c	/^void free_3D(void ***pt)$/
+free_img	allocate.c	/^void free_img(void **pt)$/
+free_prior_param	icd.c	/^void free_prior_param(prior_param *priorparam)$/
+freqs	structs2.h	12
+fwd3df	fwdsolver3d.f	/^      integer function fwd3df(nnx,nny,nnz, xmin, x/
+fwdsolver3d.o	Makefile	/^fwdsolver3d.o : fwdsolver3d.f$/
+fwdsolver_3d	frechet.c	/^int fwdsolver_3d($/
+fwdsolver_3d_fluo	frechet.c	/^int fwdsolver_3d_fluo($/
+get_3D	allocate.c	/^void ***get_3D(int N, int M, int A, size_t size)$/
+get_all_phys	textfile.c	/^void get_all_phys(FILE *fp, phys_param *phys, src_/
+get_config	textfile.c	/^int get_config(FILE *fp, config_param *config){$/
+get_config_fluo	textfile.c	/^int get_config_fluo(FILE *fp, fluo_config_param *c/
+get_connections	textfile.c	/^int get_connections(FILE *fp, phys_param *phys, $/
+get_detector	textfile.c	/^int get_detector(FILE *fp, det_param *det){$/
+get_img	allocate.c	/^void **get_img(int wd,int ht,size_t size)$/
+get_neighbor	icd.c	/^int get_neighbor($/
+get_phys	textfile.c	/^int get_phys(FILE *fp, phys_param *phys){$/
+get_prior	textfile.c	/^int get_prior(FILE *fp, prior_param *prior ){$/
+get_source	textfile.c	/^int get_source(FILE *fp, src_param *source){$/
+get_spc	allocate.c	/^void *get_spc(int num, size_t size)$/
+global_weight_calibrate	calibrate.c	/^int global_weight_calibrate($/
+global_weight_flag	structs.h	83
+global_weight_flag	structs.h	133
+golden	golden.c	/^mtype golden(mtype ax,mtype bx,mtype cx,mtype (*f)/
+golden.o	Makefile	/^golden.o : golden.c defs.h structs.h$/
+homogeneous.o	Makefile	/^homogeneous.o : homogeneous.c $(LIB_OBJS) fileop.c/
+homogeneous_flag	structs.h	79
+homogeneous_flag	structs.h	125
+i	structs2.h	5
+icd.o	Makefile	/^icd.o : icd.c $(LIB_OBJS) fileop.c textfile.c list/
+icdmain	Makefile	/^icdmain : $(OBJ) $/
+icdmain.o	Makefile	/^icdmain.o : icdmain.c $(LIB_OBJS) fileop.c  textfi/
+icdsd.o	Makefile	/^icdsd.o : icdsd.c $(LIB_OBJS) fileop.c textfile.c /
+init_guess_flag	structs.h	84
+init_guess_fluo_flag	structs.h	134
+init_guess_fluo_path	structs.h	110
+init_guess_fluo_varname	structs.h	112
+init_guess_opt_flag	structs.h	135
+init_guess_opt_path	structs.h	111
+init_guess_opt_varname	structs.h	113
+init_guess_path	structs.h	70
+init_guess_varname	structs.h	71
+init_wgti	structs.h	64
+init_wgti	structs.h	104
+init_wgtr	structs.h	63
+init_wgtr	structs.h	103
+initialize_header	fileop.c	/^void initialize_header(FILE *fp){$/
+is_double	textfile.c	/^int is_double(char *buf){$/
+is_int	textfile.c	/^int is_int(char *buf){$/
+j	cud3.d	76
+j	cud3.d	1123
+j	structs2.h	6
+k	cud3.d	76
+k	cud3.d	1124
+kcycd3	cud3.f	/^      subroutine kcycd3(wk)$/
+kcycp2	cud3pn.f	/^      subroutine kcycp2(wk)$/
+l	structs2.h	7
+linked_list	liststructs.h	3
+list_2D	liststructs.h	12
+listfun.o	Makefile	/^listfun.o : listfun.c  listfun.h  liststructs.h$/
+lookfor	textfile.c	/^int lookfor(FILE *fp,  char *findme){$/
+max	bracket.c	/^#define max(X, Y)  ((X) > (Y) ? (X) : (Y))$/
+meas_file	structs.h	76
+meas_file	structs.h	120
+mget_spc	allocate.c	/^void *mget_spc(int num,size_t size)$/
+min	bracket.c	/^#define min(X, Y)  ((X) < (Y) ? (X) : (Y))$/
+mtype	structs.h	6
+mu_store_flag	structs.h	67
+mu_x_file	structs.h	122
+mua_backg	structs.h	60
+mua_backg	structs.h	100
+mua_flag	structs.h	80
+mua_flag	structs.h	130
+muhatpath	structs.h	66
+mult_frechet_row	frechet.c	/^int mult_frechet_row($/
+multialloc	allocate.c	/^void *multialloc(size_t s, int d, ...)$/
+multifree	allocate.c	/^void multifree(void *r,int d)$/
+neighbor	structs2.h	11
+next	liststructs.h	5
+next	liststructs.h	14
+niterations	structs.h	56
+niterations	structs.h	93
+normal	randlib.c	/^double normal()$/
+obj_fn	icd.c	/^mtype obj_fn($/
+obj_fn_fluo	icd.c	/^mtype obj_fn_fluo($/
+omega	structs.h	11
+omega	structs.h	20
+one_det_calibrate	calibrate.c	/^int one_det_calibrate($/
+one_src_calibrate	calibrate.c	/^int one_src_calibrate($/
+p	structs.h	46
+phys_file	structs.h	73
+phys_file	structs.h	115
+phys_param	structs.h	40
+phys_parameter	structs.h	26
+print_int_list_2d	listfun.c	/^int print_int_list_2d(LINK2D head2d){$/
+prior_D_file	structs.h	74
+prior_D_file	structs.h	118
+prior_gamma_file	structs.h	116
+prior_mua_file	structs.h	75
+prior_mua_file	structs.h	119
+prior_param	structs.h	49
+prior_parameter	structs.h	43
+prior_tau_file	structs.h	117
+priorparam	structs2.h	2
+randlib.o	Makefile	/^randlib.o : randlib.c randlib.h$/
+random2	randlib.c	/^double random2()$/
+random3	randlib.c	/^int random3()$/
+read_float	fileop.c	/^int read_float(FILE *fp, int byte_order, mtype *re/
+read_float_array	fileop.c	/^int read_float_array(FILE *fp, char *name, mtype */
+read_int	fileop.c	/^int read_int(FILE *fp, int byte_order, int *readme/
+read_next_double	textfile.c	/^int read_next_double(FILE *fp, double *readme){$/
+read_next_int	textfile.c	/^int read_next_int(FILE *fp, int *readme){$/
+read_next_int_or_brace	textfile.c	/^int read_next_int_or_brace(FILE *fp, int *readme){/
+read_next_word	textfile.c	/^int read_next_word(FILE *fp, char *buf){$/
+readseed	randlib.c	/^void readseed()$/
+relcd3	cud3.f	/^      subroutine relcd3(wk)$/
+relcd3p	cud3.f	/^      subroutine relcd3p(nx,ny,nz,phi,cof)$/
+relcp2	cud3pn.f	/^      subroutine relcp2(nx,ny,phi,cof,tx,ty,sum)$/
+relcp2p	cud3pn.f	/^      subroutine relcp2p(nx,ny,phi,cof)$/
+remove_next_element	listfun.c	/^int remove_next_element(LINK the_one_before ){$/
+remove_next_element_2d	listfun.c	/^int remove_next_element_2d(LINK2D the_one_before )/
+rescd3	cud3.f	/^      subroutine rescd3(nx,ny,nz,phi,cof,ncx,ncy,n/
+rescp2	cud3pn.f	/^      subroutine rescp2(nx,ny,phi,ncx,ncy,phic,rhs/
+resultpath	structs.h	68
+resultpath	structs.h	108
+rho	structs.h	/^  double (*rho)(double, double, double, double);  /
+rmse_tol	structs.h	57
+rmse_tol	structs.h	94
+root_find	icd.c	/^double  root_find($/
+round	defs.h	/^#define  round(x)       ((int)(x+0.5))$/
+rvssolver_sg	icd.c	/^void rvssolver_sg($/
+rvssolver_sg_fluo	icd.c	/^void rvssolver_sg_fluo($/
+sd	randlib.c	19
+sigma	structs.h	45
+slxcd3	cud3ln.f	/^      subroutine slxcd3(nx,ny,nz,phi,cof,tx,sum,nx/
+slxcp2	cud3pn.f	/^      subroutine slxcp2(nx,ny,phi,cof,tx,sum)$/
+slycd3	cud3ln.f	/^      subroutine slycd3(nx,ny,nz,phi,cof,ty,sum,nx/
+slycp2	cud3pn.f	/^      subroutine slycp2(nx,ny,phi,cof,ty,sum)$/
+slzcd3	cud3ln.f	/^      subroutine slzcd3(nx,ny,nz,phi,cof,tz,sum,nx/
+solve	solve.c	/^double  solve($/
+sparse	structs.h	33
+srandom2	randlib.c	/^void srandom2(unsigned long num)$/
+src_det_calibrate	calibrate.c	/^int src_det_calibrate($/
+src_param	structs.h	15
+src_parameter	structs.h	9
+tau_backg	structs.h	97
+tau_flag	structs.h	127
+textfile.o	Makefile	/^textfile.o : textfile.c  textfile.h$/
+theta1	structs2.h	9
+theta2	structs2.h	10
+tmp	randlib.c	19
+u	structs2.h	4
+update_frechet_col_fluo	frechet.c	/^int update_frechet_col_fluo($/
+v	structs.h	35
+wgti	structs.h	38
+wgtr	structs.h	37
+write_float	fileop.c	/^int write_float(FILE *fp, int byte_order, mtype wr/
+write_float_array	fileop.c	/^int write_float_array(FILE *fp, char *name, mtype /
+write_int	fileop.c	/^int write_int(FILE *fp, int byte_order, int writem/
+writeseed	randlib.c	/^void writeseed()$/
+x	structs2.h	3
+x	structs.h	10
+x	structs.h	19
+xmax	structs.h	27
+xmin	structs.h	27
+y	structs.h	10
+y	structs.h	19
+ymax	structs.h	28
+ymin	structs.h	28
+z	structs.h	10
+z	structs.h	19
+zmax	structs.h	29
+zmin	structs.h	29

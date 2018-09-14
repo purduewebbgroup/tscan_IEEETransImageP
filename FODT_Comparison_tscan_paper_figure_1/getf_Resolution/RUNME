@@ -1,0 +1,2 @@
+echo ./getf_Resolution fluo
+./getf_Resolution fluo

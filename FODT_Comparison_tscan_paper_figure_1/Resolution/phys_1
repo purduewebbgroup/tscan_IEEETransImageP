@@ -1,0 +1,461 @@
+# Physical Parameters
+physical {
+ xmin  -0.05
+ xmax   1.65
+ ymin  -0.05
+ ymax   1.65
+ zmin  -0.05
+ zmax   1.65
+
+  Ni  33
+  Nj  33
+  Nl  33
+
+  K  26
+  M  28
+
+  v   2.25414e+10
+}
+
+
+#Sources
+
+source {
+#0
+  position 0.375 0.8 -0.05
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#1
+  position 0.375 0.8 1.65
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#2
+  position 0.8 0.375 -0.05
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#3
+  position 0.8 0.375 1.65
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#4
+  position 0.8 1.225 -0.05
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#5
+  position 0.8 1.225 1.65
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#6
+  position 1.225 0.8 -0.05
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#7
+  position 1.225 0.8 1.65
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#8
+  position 0.375 -0.05 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#9
+  position 0.375 1.65 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#10
+  position 0.375 -0.05 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#11
+  position 0.375 1.65 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#12
+  position 0.8 -0.05 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#13
+  position 0.8 1.65 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#14
+  position 1.225 -0.05 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#15
+  position 1.225 1.65 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#16
+  position 1.225 -0.05 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#17
+  position 1.225 1.65 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#18
+  position -0.05 0.375 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#19
+  position 1.65 0.375 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#20
+  position -0.05 0.8 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#21
+  position 1.65 0.8 0.375
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#22
+  position -0.05 0.8 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#23
+  position 1.65 0.8 1.225
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#24
+  position -0.05 1.225 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+source {
+#25
+  position 1.65 1.225 0.8
+  omega  4.927988476219283e+08
+  beta  1.0
+  calir  1.0
+  calii  0.0
+}
+
+
+
+#detectors
+detector {
+#0
+  position 0.375 0.375 -0.05
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#1
+  position 0.375 0.375 1.65
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#2
+  position 0.375 1.225 -0.05
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#3
+  position 0.375 1.225 1.65
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#4
+  position 0.8 0.8 -0.05
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#5
+  position 0.8 0.8 1.65
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#6
+  position 1.225 0.375 -0.05
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#7
+  position 1.225 0.375 1.65
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#8
+  position 1.225 1.225 -0.05
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#9
+  position 1.225 1.225 1.65
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#10
+  position 0.375 -0.05 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#11
+  position 0.375 1.65 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#12
+  position 0.8 -0.05 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#13
+  position 0.8 1.65 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#14
+  position 0.8 -0.05 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#15
+  position 0.8 1.65 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#16
+  position 1.225 -0.05 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#17
+  position 1.225 1.65 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#18
+  position -0.05 0.375 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#19
+  position 1.65 0.375 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#20
+  position -0.05 0.375 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#21
+  position 1.65 0.375 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#22
+  position -0.05 0.8 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#23
+  position 1.65 0.8 0.8
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#24
+  position -0.05 1.225 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#25
+  position 1.65 1.225 0.375
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#26
+  position -0.05 1.225 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+detector {
+#27
+  position 1.65 1.225 1.225
+  omega  4.927988476219283e+08
+  calir  1.0
+  calii  0.0
+}
+
+
+#Connections
+connections {
+0 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+1 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+2 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+3 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+4 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+5 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+6 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+7 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+8 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+9 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+10 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+11 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+12 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+13 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+14 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+15 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+16 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+17 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+18 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+19 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+20 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+21 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+22 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+23 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+24 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+25 [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 ]
+}

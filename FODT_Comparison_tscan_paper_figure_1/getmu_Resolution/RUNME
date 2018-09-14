@@ -1,0 +1,4 @@
+echo ./getmu_Resolution mu_x
+./getmu_Resolution mu_x
+echo ./getmu_Resolution mu_m
+./getmu_Resolution mu_m
