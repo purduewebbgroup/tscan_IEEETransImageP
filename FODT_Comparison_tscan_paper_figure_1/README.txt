@@ -50,6 +50,9 @@ Fluorescence optical diffusion tomography
     - Dr. Adam Milstein (amilstei@purdue.edu)
       Lincoln Lab 
 
+	- Brian Z. Bentz (bbentz@purdue.edu)
+      Electrical and Computer Engineering, Purdue University
+
 	- Justin Patel (patel705@purdue.edu)
       Electrical and Computer Engineering, Purdue University
 
